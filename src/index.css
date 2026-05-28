@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-sage-50: #f4f6f4;
+  --color-sage-100: #e9ece9;
+  --color-sage-200: #d2dad2;
+  --color-sage-600: #7b8e7b;
+  --color-sage-700: #627262;
+  --color-sage-800: #4a564a;
+}
+
+/* Base resets & global scroll bar */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0d120d; /* Premium deep dark canvas frame */
+}
+
+/* Custom keyframes for premium animations */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+.floating-heart {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Soft gold shimmer background transition */
+.gold-shimmer {
+  background: linear-gradient(135deg, #dfc07f 0%, #b89754 50%, #e6cb95 100%);
+}
+

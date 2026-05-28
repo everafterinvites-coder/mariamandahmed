@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Wedding Invitation",
+  "description": "An elegant, interactive wedding invitation with opening envelope, real-time countdown, venue maps, and premium romantic elements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
