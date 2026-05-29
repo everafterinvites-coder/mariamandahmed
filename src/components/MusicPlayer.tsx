@@ -10,8 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Looks directly into your newly created public folder on the server
-    const audio = new Audio('/sparks.mp3');
+    // Specifically targets the public folder asset within your GitHub Pages subfolder structure
+    const audio = new Audio('/mariamandahmed/sparks.mp3');
     audio.loop = true;
     audioRef.current = audio;
 
