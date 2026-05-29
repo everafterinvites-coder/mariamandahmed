@@ -10,8 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Points directly to the sparks.mp3 file sitting in your main repository folder
-    const audio = new Audio('./sparks.mp3');
+    // Accesses your root-level file directly through your GitHub raw user content address
+    const audio = new Audio('https://raw.githubusercontent.com/everafterinvites-coder/mariamandahmed/main/sparks.mp3');
     audio.loop = true;
     audioRef.current = audio;
 
