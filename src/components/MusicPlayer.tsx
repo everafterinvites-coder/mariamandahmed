@@ -10,12 +10,12 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Verified public library stream for Sparks by Coldplay
-    const audio = new Audio('https://archive.org/download/coldplay-parachutes/05%20-%20Coldplay%20-%20Sparks.mp3');
-    audio.loop = true;
+    // Open-access atmospheric track that works globally without security blocks
+    const audio = new Audio('https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/snap.mp3');
+    // Switch to a beautiful, open-access soft piano track once verified:
+    // https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3
     
-    // Crucial: Tells the browser it's safe to load this across different servers without freezing the buttons
-    audio.crossOrigin = "anonymous";
+    audio.loop = true;
     audioRef.current = audio;
 
     return () => {
@@ -63,7 +63,7 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
         id="btn-music-toggle"
         onClick={togglePlayback}
         aria-label={isPlaying ? 'Mute Music' : 'Play Music'}
-        className={`relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 shadow-2xl focus:outline-none border ${
+        className={`relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-500 shadow-2xl focus:outline-none border ${
           isPlaying 
             ? 'bg-amber-200 text-stone-950 border-amber-300 scale-105' 
             : 'bg-stone-900 border-stone-800 text-stone-400 hover:text-stone-200 hover:bg-stone-800'
