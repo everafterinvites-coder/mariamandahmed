@@ -10,9 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Open global streaming link for Sparks by Coldplay - bypasses CORS blocks
-    const audio = new Audio('https://scummbar.com/mi2/MI1-CD/01%20-%20Opening%20Themes%20-%20Introduction.mp3');
-    // Swap the URL inside the quotes above to your exact choice anytime!
+    // Points directly to the local asset you just added to your public build bundle
+    const audio = new Audio('/mariamandahmed/sparks.mp3');
     
     audio.loop = true;
     audioRef.current = audio;
