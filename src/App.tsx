@@ -7,8 +7,8 @@ import MusicPlayer from './components/MusicPlayer';
 export default function App() {
   const [envelopeOpened, setEnvelopeOpened] = useState(false);
 
-  // Background asset URL
-  const backgroundUrl = '/src/assets/images/wedding_chateau_bg_1779996764518.png';
+  // Updated Background asset URL to point to the root-relative GitHub Pages path
+  const backgroundUrl = '/mariamandahmed/background.png';
 
   const handleOpenEnvelope = () => {
     setEnvelopeOpened(true);
@@ -46,4 +46,3 @@ export default function App() {
     </main>
   );
 }
-
