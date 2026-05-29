@@ -10,10 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Open-access atmospheric track that works globally without security blocks
-    const audio = new Audio('https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/snap.mp3');
-    // Switch to a beautiful, open-access soft piano track once verified:
-    // https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3
+    // Beautiful, open-access soft piano track that matches your gorgeous Chateau theme perfectly
+    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
     
     audio.loop = true;
     audioRef.current = audio;
