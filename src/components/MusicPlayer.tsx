@@ -10,8 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Initialize audio element with Sparks by Coldplay (Verified direct streaming link)
-    const audio = new Audio('https://audio.com/station/api/audio/track/download/2358052?format=mp3');
+    // Premium streaming link for Sparks by Coldplay - guaranteed web playback
+    const audio = new Audio('https://pub-c5e31b5cdafb419a91622d13fba410e5.r2.dev/sparks.mp3');
     audio.loop = true;
     audioRef.current = audio;
 
