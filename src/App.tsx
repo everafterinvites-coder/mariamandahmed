@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import Envelope from './components/Envelope';
@@ -12,7 +7,7 @@ import MusicPlayer from './components/MusicPlayer';
 export default function App() {
   const [envelopeOpened, setEnvelopeOpened] = useState(false);
 
-  // Background asset URL generated using the image-generation capability
+  // Background asset URL
   const backgroundUrl = '/src/assets/images/wedding_chateau_bg_1779996764518.png';
 
   const handleOpenEnvelope = () => {
