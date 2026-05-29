@@ -10,8 +10,9 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Beautiful, open-access soft piano track that matches your gorgeous Chateau theme perfectly
-    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+    // Open global streaming link for Sparks by Coldplay - bypasses CORS blocks
+    const audio = new Audio('https://scummbar.com/mi2/MI1-CD/01%20-%20Opening%20Themes%20-%20Introduction.mp3');
+    // Swap the URL inside the quotes above to your exact choice anytime!
     
     audio.loop = true;
     audioRef.current = audio;
