@@ -10,8 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Accesses your root-level file directly through your GitHub raw user content address
-    const audio = new Audio('https://raw.githubusercontent.com/everafterinvites-coder/mariamandahmed/main/sparks.mp3');
+    // Points directly to the root path of your live Vercel domain where sparks.mp3 sits
+    const audio = new Audio('/sparks.mp3');
     audio.loop = true;
     audioRef.current = audio;
 
