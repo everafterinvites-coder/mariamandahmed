@@ -10,7 +10,7 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Points directly to the root path of your live Vercel domain where sparks.mp3 sits
+    // Looks directly into your newly created public folder on the server
     const audio = new Audio('/sparks.mp3');
     audio.loop = true;
     audioRef.current = audio;
