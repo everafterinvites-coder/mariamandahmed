@@ -10,8 +10,8 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Initialize audio element with a dreamy romantic piano instrumental track
-    const audio = new Audio('https://assets.mixkit.co/music/preview/mixkit-beautiful-dream-493.mp3');
+    // Initialize audio element with Sparks by Coldplay (Hosted streamable archive link)
+    const audio = new Audio('https://archive.org/download/coldplay-parachutes/05%20-%20Coldplay%20-%20Sparks.mp3');
     audio.loop = true;
     audioRef.current = audio;
 
