@@ -10,9 +10,13 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Points directly to the local asset you just added to your public build bundle
-    const audio = new Audio('/mariamandahmed/sparks.mp3');
-    
+    // Dynamically grabs your correct GitHub repository path automatically!
+    // Change 'sparks.mp3' below to match your exact uploaded filename if it is different
+    const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+      ? import.meta.env.BASE_URL 
+      : `${import.meta.env.BASE_URL}/`;
+      
+    const audio = new Audio(`${baseUrl}sparks.mp3`);
     audio.loop = true;
     audioRef.current = audio;
 
@@ -69,7 +73,7 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
       >
         {isPlaying ? (
           <Volume2 id="icon-sound-on" size={20} />
-        ) : (
+         ) : (
           <VolumeX id="icon-sound-off" size={20} />
         )}
       </button>
