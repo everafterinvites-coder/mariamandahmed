@@ -8,7 +8,7 @@ export default function App() {
   const [envelopeOpened, setEnvelopeOpened] = useState(false);
 
   // Updated Background asset URL to point to the root-relative GitHub Pages path
-  const backgroundUrl = '/mariamandahmed/background.jpg';
+  const backgroundUrl = '/mariamandahmed/background.png';
 
   const handleOpenEnvelope = () => {
     setEnvelopeOpened(true);
