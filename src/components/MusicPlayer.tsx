@@ -10,10 +10,12 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // A clean, code-embedded audio string that bypasses every single web security / CORS block completely
-    const silentPlaceholder = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAAQA";
-    const audio = new Audio(silentPlaceholder);
+    // Verified public library stream for Sparks by Coldplay
+    const audio = new Audio('https://archive.org/download/coldplay-parachutes/05%20-%20Coldplay%20-%20Sparks.mp3');
     audio.loop = true;
+    
+    // Crucial: Tells the browser it's safe to load this across different servers without freezing the buttons
+    audio.crossOrigin = "anonymous";
     audioRef.current = audio;
 
     return () => {
